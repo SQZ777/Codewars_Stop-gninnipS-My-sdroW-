@@ -38,9 +38,8 @@ namespace Stop_gninnipS_My_sdroWTest
         {
             if (input.Length > 4)
             {
-                char[] inputArray = input.ToCharArray();
-                Array.Reverse(inputArray);
-                return new string(inputArray);
+                Array.Reverse(input.ToCharArray());
+                return new string(input.ToCharArray());
             }
             return input;
         }
