@@ -45,19 +45,14 @@ namespace Stop_gninnipS_My_sdroWTest
         {
             string[] inputArray = input.Split();
             for (int i = 0; i < inputArray.Length; i++)
-            {
-                inputArray[i] = reverseArray(inputArray[i]);
-            }
-            return string.Join(" ",inputArray);
+                inputArray[i] = reverseArray(inputArray[i].ToCharArray());
+            return string.Join(" ", inputArray);
         }
-        private static string reverseArray(string inputArray)
+        private static string reverseArray(char[] inputArray)
         {
-            char[] inputCharArray = inputArray.ToCharArray();
             if (inputArray.Length > 4)
-            {
-                Array.Reverse(inputCharArray);
-            }
-            return new string(inputCharArray);
+                Array.Reverse(inputArray);
+            return new string(inputArray);
         }
     }
 }
