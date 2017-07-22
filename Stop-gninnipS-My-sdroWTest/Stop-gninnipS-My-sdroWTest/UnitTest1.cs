@@ -44,6 +44,12 @@ namespace Stop_gninnipS_My_sdroWTest
             spinResult("Hey fellow warriors","Hey wollef sroirraw");
         }
 
+        [TestMethod]
+        public void Input_This_is_a_test_Should_Be_This_is_a_test()
+        {
+            spinResult("This is a test","This is a test");
+        }
+
         private static void spinResult(string input, string expected)
         {
             var actual = Kata.spinWords(input);
