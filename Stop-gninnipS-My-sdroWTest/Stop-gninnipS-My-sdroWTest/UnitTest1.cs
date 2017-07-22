@@ -20,7 +20,7 @@ namespace Stop_gninnipS_My_sdroWTest
     {
         public static string spinWords(string input)
         {
-            throw new NotImplementedException();
+            return input;
         }
     }
 }
