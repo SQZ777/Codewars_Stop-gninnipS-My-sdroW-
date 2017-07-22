@@ -50,6 +50,12 @@ namespace Stop_gninnipS_My_sdroWTest
             spinResult("This is a test","This is a test");
         }
 
+        [TestMethod]
+        public void Input_This_is_another_test_Should_Be_This_is_rehtona_test()
+        {
+            spinResult("This is another test", "This is rehtona test");
+        }
+
         private static void spinResult(string input, string expected)
         {
             var actual = Kata.spinWords(input);
