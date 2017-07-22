@@ -56,6 +56,12 @@ namespace Stop_gninnipS_My_sdroWTest
             spinResult("This is another test", "This is rehtona test");
         }
 
+        [TestMethod]
+        public void Input_You_are_almost_to_the_last_test_Should_Be_You_are_tsomla_to_the_last_test()
+        {
+            spinResult("You are almost to the last test", "You are tsomla to the last test");
+        }
+
         private static void spinResult(string input, string expected)
         {
             var actual = Kata.spinWords(input);
