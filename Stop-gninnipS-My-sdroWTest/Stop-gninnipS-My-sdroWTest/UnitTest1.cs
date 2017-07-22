@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.InteropServices.ComTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 namespace Stop_gninnipS_My_sdroWTest
 {
@@ -42,13 +43,21 @@ namespace Stop_gninnipS_My_sdroWTest
     {
         public static string spinWords(string input)
         {
-            if (input.Length > 4)
+            string[] inputArray = input.Split();
+            for (int i = 0; i < inputArray.Length; i++)
             {
-                char[] inputCharArray = input.ToCharArray();
-                Array.Reverse(inputCharArray);
-                return new string(inputCharArray);
+                inputArray[i] = reverseArray(inputArray[i]);
             }
-            return input;
+            return string.Join(" ",inputArray);
+        }
+        private static string reverseArray(string inputArray)
+        {
+            char[] inputCharArray = inputArray.ToCharArray();
+            if (inputArray.Length > 4)
+            {
+                Array.Reverse(inputCharArray);
+            }
+            return new string(inputCharArray);
         }
     }
 }
