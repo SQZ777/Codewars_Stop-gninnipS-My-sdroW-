@@ -24,7 +24,13 @@ namespace Stop_gninnipS_My_sdroWTest
         {
             spinResult("Hello", "olleH");
         }
-        
+
+        [TestMethod]
+        public void Input_Hello_World_Should_Be_olleH_dlroW()
+        {
+            spinResult("Hello World", "olleH dlroW");
+        }
+
         private static void spinResult(string input, string expected)
         {
             var actual = Kata.spinWords(input);
@@ -38,8 +44,9 @@ namespace Stop_gninnipS_My_sdroWTest
         {
             if (input.Length > 4)
             {
-                Array.Reverse(input.ToCharArray());
-                return new string(input.ToCharArray());
+                char[] inputCharArray = input.ToCharArray();
+                Array.Reverse(inputCharArray);
+                return new string(inputCharArray);
             }
             return input;
         }
