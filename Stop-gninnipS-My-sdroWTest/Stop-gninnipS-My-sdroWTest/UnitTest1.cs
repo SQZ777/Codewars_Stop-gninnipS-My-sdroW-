@@ -62,6 +62,12 @@ namespace Stop_gninnipS_My_sdroWTest
             spinResult("You are almost to the last test", "You are tsomla to the last test");
         }
 
+        [TestMethod]
+        public void Input_Just_kidding_there_is_still_one_more_Should_Be_Just_gniddik_ereht_is_llits_one_more()
+        {
+            spinResult("Just kidding there is still one more", "Just gniddik ereht is llits one more");
+        }
+
         private static void spinResult(string input, string expected)
         {
             var actual = Kata.spinWords(input);
